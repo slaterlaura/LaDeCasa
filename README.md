@@ -13,7 +13,7 @@ Implementação de funcionalidades para gestão do negócio
 
 Testes, documentação e treinamentos para uso da solução
 
-# Parceria
+# Parcerias
 
 ONG Aventura de Construir – Apoio ao empreendedorismo comunitário
 
