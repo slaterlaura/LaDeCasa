@@ -73,7 +73,7 @@ O sistema utiliza a paleta de cores da marca:
 
 ```
 /home/ubuntu/
-├── la-de-casa-backend/          # Backend Java Spring Boot
+├── dash-backend/          # Backend Java Spring Boot
 │   ├── src/
 │   │   ├── main/
 │   │   │   ├── java/com/ladecasa/
@@ -90,7 +90,7 @@ O sistema utiliza a paleta de cores da marca:
 │   │   └── test/
 │   └── pom.xml
 │
-└── la-de-casa-frontend/         # Frontend React
+└── dash-frontend/         # Frontend React
     ├── src/
     │   ├── components/
     │   │   ├── Auth/            # Login
@@ -121,7 +121,7 @@ O sistema utiliza a paleta de cores da marca:
 
 1. Navegue até o diretório do backend:
 ```bash
-cd /home/ubuntu/la-de-casa-backend
+cd /home/ubuntu/dash-backend
 ```
 
 2. Compile o projeto:
@@ -140,7 +140,7 @@ O backend estará disponível em: `http://localhost:8080/api`
 
 1. Navegue até o diretório do frontend:
 ```bash
-cd /home/ubuntu/la-de-casa-frontend
+cd /home/ubuntu/dash-frontend
 ```
 
 2. Instale as dependências:

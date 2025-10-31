@@ -35,14 +35,14 @@ npm install -g pnpm
 ### 1. Obter o Código
 
 Os arquivos do projeto estão localizados em:
-- Backend: `/home/ubuntu/la-de-casa-backend`
-- Frontend: `/home/ubuntu/la-de-casa-frontend`
+- Backend: `/home/ubuntu/dash-backend`
+- Frontend: `/home/ubuntu/dash-frontend`
 
 ### 2. Configurar o Backend
 
 ```bash
 # Navegar para o diretório do backend
-cd /home/ubuntu/la-de-casa-backend
+cd /home/ubuntu/dash-backend
 
 # Compilar o projeto
 mvn clean package -DskipTests
@@ -55,7 +55,7 @@ mvn clean package -DskipTests
 
 ```bash
 # Navegar para o diretório do frontend
-cd /home/ubuntu/la-de-casa-frontend
+cd /home/ubuntu/dash-frontend
 
 # Instalar dependências
 pnpm install
@@ -67,13 +67,13 @@ pnpm install
 
 **Opção 1: Execução direta**
 ```bash
-cd /home/ubuntu/la-de-casa-backend
+cd /home/ubuntu/dash-backend
 java -jar target/gestao-insumos-1.0.0.jar
 ```
 
 **Opção 2: Execução em background**
 ```bash
-cd /home/ubuntu/la-de-casa-backend
+cd /home/ubuntu/dash-backend
 nohup java -jar target/gestao-insumos-1.0.0.jar > backend.log 2>&1 &
 ```
 
@@ -82,7 +82,7 @@ O backend estará disponível em: `http://localhost:8080/api`
 ### Executar o Frontend
 
 ```bash
-cd /home/ubuntu/la-de-casa-frontend
+cd /home/ubuntu/dash-frontend
 pnpm run dev
 ```
 
@@ -249,7 +249,7 @@ pnpm install
 ### Backend
 
 ```bash
-cd /home/ubuntu/la-de-casa-backend
+cd /home/ubuntu/dash-backend
 mvn clean package -DskipTests
 
 # O JAR estará em target/gestao-insumos-1.0.0.jar
@@ -258,7 +258,7 @@ mvn clean package -DskipTests
 ### Frontend
 
 ```bash
-cd /home/ubuntu/la-de-casa-frontend
+cd /home/ubuntu/dash-frontend
 pnpm run build
 
 # Os arquivos otimizados estarão em dist/

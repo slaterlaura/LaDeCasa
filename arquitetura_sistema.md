@@ -161,7 +161,7 @@ Sistema de gestão de insumos e pedidos para produção artesanal de alimentos, 
 
 ### Backend (Java)
 ```
-la-de-casa-backend/
+dash-backend/
 ├── src/main/java/com/ladecasa/
 │   ├── config/
 │   │   ├── SecurityConfig.java
@@ -193,7 +193,7 @@ la-de-casa-backend/
 
 ### Frontend (React)
 ```
-la-de-casa-frontend/
+dash-frontend/
 ├── src/
 │   ├── components/
 │   │   ├── Auth/
