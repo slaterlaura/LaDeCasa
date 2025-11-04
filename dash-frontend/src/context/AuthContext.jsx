@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import { login as apiLogin } from '../services/api';
+import { login as apiLogin, getMe } from '../services/api';
 
 const AuthContext = createContext();
 
@@ -16,13 +16,37 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('user');
-    const storedToken = localStorage.getItem('token');
-    
-    if (storedUser && storedToken) {
-      setUser(JSON.parse(storedUser));
-    }
-    setLoading(false);
+    const initializeAuth = async () => {
+      const storedToken = localStorage.getItem('token');
+      const storedUser = localStorage.getItem('user');
+
+      if (!storedToken) {
+        setUser(null);
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const me = await getMe();
+        const meData = me.data;
+        const userData = {
+          id: meData.id,
+          nome: meData.nome,
+          email: meData.email,
+          role: meData.role,
+        };
+        localStorage.setItem('user', JSON.stringify(userData));
+        setUser(userData);
+      } catch (err) {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        setUser(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    initializeAuth();
   }, []);
 
   const login = async (credentials) => {
